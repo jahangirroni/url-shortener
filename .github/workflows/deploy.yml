@@ -16,9 +16,8 @@ jobs:
         with:
           python-version: '3.11'
       
-      - name: Create Lambda deployment package
-        run: |
-          zip lambda.zip lambda_function.py
+      - name: Create Lambda package
+        run: zip lambda.zip lambda_function.py
       
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
